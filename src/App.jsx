@@ -1,9 +1,22 @@
-export default function App() {
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import NovoProjeto from './pages/NovoProjeto'
+import Projeto from './pages/Projeto'
+import Avaliar from './pages/Avaliar'
+
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        SkillRate!
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/novo-projeto" element={<NovoProjeto />} />
+        <Route path="/projeto/:id" element={<Projeto />} />
+        <Route path="/avaliar/:id" element={<Avaliar />} />
+      </Routes>
+    </>
   )
 }
+
+export default App
