@@ -1,22 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import NovoProjeto from './pages/NovoProjeto'
-import Projeto from './pages/Projeto'
-import Avaliar from './pages/Avaliar'
+import React from "react";
+import Navbar from "./components/Navbar.jsx";
+import HeroSection from "./components/HeroSection.jsx";
+import HowItWorks from "./components/HowItWorks.jsx";
+import FeatureWorks from "./components/FeatureWorks.jsx";
+import Testimonials from "./components/Testimonials.jsx";
+import CallToAction from "./components/CallToAction.jsx";
+import Footer from "./components/Footer.jsx";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/novo-projeto" element={<NovoProjeto />} />
-        <Route path="/projeto/:id" element={<Projeto />} />
-        <Route path="/avaliar/:id" element={<Avaliar />} />
-      </Routes>
+      <HeroSection />
+      <HowItWorks />
+      <FeatureWorks />
+      <Testimonials />
+      <CallToAction />
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App

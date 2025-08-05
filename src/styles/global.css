@@ -1,0 +1,9 @@
+.gradient-bg {
+  background: linear-gradient(90deg, #7c3aed 0%, #ec4899 100%);
+}
+
+.work-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
